@@ -11,7 +11,7 @@ function authHeaders(extraHeaders = {}) {
 
 export const api = {
   async login({ email, password }) {
-    const res = await fetch('/auth/login', {
+    const res = await fetch(`${BASE}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
